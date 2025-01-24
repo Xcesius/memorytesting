@@ -1,0 +1,113 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; /* Light background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#chat-container {
+    width: 80%;
+    max-width: 700px; /* Max width for readability */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    overflow: hidden; /* For rounded corners of inner elements */
+    display: flex;
+    flex-direction: column;
+    height: 80vh; /* Set a height for scrolling */
+}
+
+#chat-messages {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scroll */
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    clear: both; /* Prevent floating issues */
+}
+
+.user-message {
+    background-color: #e0f7fa; /* Light blue for user messages */
+    align-self: flex-end; /* Align user messages to the right */
+    float: right;
+}
+
+.bot-message {
+    background-color: #ede7f6; /* Light purple for bot messages */
+    align-self: flex-start; /* Align bot messages to the left */
+    float: left;
+}
+
+#input-area {
+    padding: 20px;
+    background-color: #eee; /* Light grey input area */
+    border-top: 1px solid #ddd;
+    display: flex;
+}
+
+#prompt-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+#send-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #00bcd4; /* Teal send button */
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#send-button:hover {
+    background-color: #00acc1; /* Darker teal on hover */
+}
+
+.thinking-message {
+    background-color: #fff8e1; /* Light yellow for thinking messages */
+    font-style: italic;
+    color: #757575;
+    border: 1px dashed #ddd;
+}
+
+.thinking-message think {
+    display: none !important;
+}
+
+/* Add these new styles for split view */
+#container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    height: 100vh;
+}
+
+#chat-container {
+    flex: 2;
+    height: calc(100vh - 40px);
+}
+
+#thinking-container {
+    flex: 1;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

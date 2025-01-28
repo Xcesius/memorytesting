@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jarvis Chat</title>
-    <link rel="stylesheet" href="style.css"> </link>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="container">
-        <div id="chat-container">
+        <div id="chat-container" class="chat-container">
             <div id="chat-messages"></div>
             <div id="input-area">
                 <input type="text" id="prompt-input" placeholder="Type your message..." autocomplete="off">
@@ -17,7 +17,7 @@
         </div>
         <div id="thinking-container">
             <h3>Thinking Process</h3>
-            <div id="thinking-output"></div>
+            <div id="thinking-output">No active processes...</div>
         </div>
     </div>
     <script src="chat.js"></script>

@@ -90,5 +90,3 @@ export class EncryptionManager {
     return crypto.randomBytes(KEY_LENGTH).toString('base64');
   }
 }
-
-module.exports = { EncryptionManager };
